@@ -20,7 +20,7 @@ export default function Home() {
 
   const handleSearch = useCallback(async () => {
     try {
-      if (isLoading) return;
+      if (isLoading || !inputRef.current?.value) return;
 
       setIsLoading(true);
 
