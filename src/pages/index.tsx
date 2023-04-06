@@ -160,10 +160,9 @@ export default function Home() {
                     style={{
                       ...(emoji.copied && {
                         backgroundColor: "#0761D1",
-                        padding: "36px 24px",
                       }),
                     }}
-                    className="bg-accents-1 hover:bg-accents-2 hover:px-6 hover:py-9 transition-all cursor-pointer rounded-2xl px-5 py-8 flex flex-col justify-center gap-6"
+                    className="bg-accents-1 hover:bg-accents-2 transition-all cursor-pointer rounded-2xl px-5 py-8 flex flex-col justify-center gap-6"
                   >
                     <p id="char" className="text-8xl text-center">
                       {emoji.char}
