@@ -5,7 +5,7 @@ import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [emojis, setEmojis] = useState<
-    { name: string; char: string; copied: boolean }[]
+    { name: string; char: string; copied?: boolean }[]
   >([]);
   const [inputContainerFocused, setInputContainerFocused] = useState(false);
   const [inputEnterHovered, setInputEnterHovered] = useState(false);
@@ -77,7 +77,11 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col items-center w-screen pt-10 pb-20 md:pb-10">
-        <div className="flex flex-col items-center gap-8 justify-center">
+        <div
+          className={`flex flex-col items-center gap-8 justify-center ${
+            emojis.length ? "" : "h-screen"
+          }`}
+        >
           <h1 className="title text-3xl leading-10 text-center font-sans font-semibold w-9/10 md:w-auto">
             emoticon.pro
           </h1>
@@ -188,7 +192,7 @@ export default function Home() {
                         <p>Copiado</p>
                       </div>
                     ) : (
-                      <p className="text-accents-6 text-base leading-5 text-center">
+                      <p className="text-accents-6 text-base leading-5 text-center w-6 ellipsis">
                         {emoji.name}
                       </p>
                     )}

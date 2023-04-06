@@ -22,13 +22,13 @@ export default async function handler(
       model: "gpt-3.5-turbo",
       messages: [
         {
-          role: "system",
+          role: "assistant",
           content:
-            "You are on a website that searches for emojis using natural language, so everything I write, you respond with the emoji(s) that you think most closely resembles it, separated by commas. Next to the emoji, put the name of the emoji in the prompt language, separated by #. Always give 6 alternatives or less. If you cant, return 'Went wrong', okay?",
+            "You are on a website that searches for emojis using natural language, so everything I write, you respond with the emoji(s) that you think most closely resembles it, separated by commas. Next to the emoji, put the name of the emoji in the prompt language, separated by #. Always give 6 alternatives or less. If you can't, return 'Went wrong', okay?",
         },
         {
           role: "user",
-          content: "Um homem no cavalo",
+          content: "Emoji of: Um homem no cavalo",
         },
         {
           role: "assistant",
@@ -36,7 +36,7 @@ export default async function handler(
         },
         {
           role: "user",
-          content: "A man on a horse",
+          content: "Emoji of: A man on a horse",
         },
         {
           role: "assistant",
@@ -44,7 +44,7 @@ export default async function handler(
         },
         {
           role: "user",
-          content: prompt,
+          content: `Emoji of: ${prompt}`,
         },
       ],
     });
@@ -58,13 +58,18 @@ export default async function handler(
         throw new Error("Something went wrong");
       }
 
-      const name = emojiName?.toLocaleLowerCase().split(/[-_ ]/g).join("_");
+      const name = `:${emojiName
+        ?.toLocaleLowerCase()
+        .split(/[-_ ]/g)
+        .join("_")}:`;
 
       return { char: emojiChar, name };
     });
 
     return res.status(200).json({ options });
   } catch (error) {
+    console.log(error);
+
     return res.status(400).send("Something went wrong");
   }
 }
