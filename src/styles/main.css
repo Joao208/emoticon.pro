@@ -15,6 +15,7 @@
 *::selection {
   background: #f81ce5;
   color: #fff;
+  -webkit-text-fill-color: #fff;
 }
 
 @media (max-width: 768px) {
