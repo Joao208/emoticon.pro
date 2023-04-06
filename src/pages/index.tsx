@@ -39,7 +39,7 @@ export default function Home() {
     } catch (error) {
       setIsLoading(false);
 
-      toast("🙃 Something went wrong!", {
+      toast("🙃 Can't imagine any emoji, you can re-write please?", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: true,
