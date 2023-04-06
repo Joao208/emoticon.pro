@@ -117,7 +117,7 @@ export default function Home() {
                       handleSearch();
                     }
                   }}
-                  placeholder="A man in a horse"
+                  placeholder="A man on a horse"
                   className="text-white placeholder:text-accents-6 bg-transparent px-5 w-full"
                 />
 
