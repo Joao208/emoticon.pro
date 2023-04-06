@@ -41,6 +41,9 @@ export default function App({ Component, pageProps }: AppProps) {
             ],
             siteName: "emoticon.pro",
           }}
+          twitter={{
+            cardType: "summary_large_image",
+          }}
         />
       </main>
     </>
