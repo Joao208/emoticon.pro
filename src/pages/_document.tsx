@@ -20,7 +20,7 @@ export default function Document() {
         `}
         </Script>
 
-        <meta name="theme-color" color="#191c1b" />
+        <meta name="theme-color" color="#000" />
       </Head>
       <body>
         <Main />
