@@ -32,6 +32,13 @@ export default function App({ Component, pageProps }: AppProps) {
               "Search any emoji with natural language. Find the perfect emoji for your next project.",
             images: [
               {
+                url: "/og-image-01.gif",
+                width: 1728,
+                height: 1117,
+                alt: "The home page",
+                type: "image/gif",
+              },
+              {
                 url: "/og-image-01.png",
                 width: 1728,
                 height: 1117,
