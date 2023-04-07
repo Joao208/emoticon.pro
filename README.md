@@ -1,5 +1,7 @@
 # emoticon.pro
 
+![og-image-01](https://user-images.githubusercontent.com/59159025/230616845-7b3f4053-0c4e-4901-b5a1-81f6cf43d6f4.gif)
+
 This is a sample project that uses TypeScript, Tailwind, and Next.js to create an emoji search tool that uses artificial intelligence to find the emoji you're looking for.
 
 ## Installation
