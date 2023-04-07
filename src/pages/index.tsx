@@ -1,6 +1,7 @@
 import LoadingSkeleton from "@/components/loading";
 import { toast } from "react-toastify";
 import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -213,6 +214,20 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <a
+        className="fixed bottom-0 right-0 mb-10 mr-10"
+        href="https://www.producthunt.com/posts/emoticon-pro?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-emoticon&#0045;pro"
+        target="_blank"
+      >
+        <Image
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=387980&theme=dark"
+          alt="emoticon&#0046;pro - Turn&#0032;your&#0032;words&#0032;into&#0032;emojis&#0032;with&#0032;artificial&#0032;intelligence&#0046; | Product Hunt"
+          width="250"
+          height="54"
+          loader={({ src }) => src}
+        />
+      </a>
     </>
   );
 }
